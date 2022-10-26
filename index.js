@@ -1,24 +1,33 @@
-const path = require('path')
+const newman = require('newman');
+const config = require('./config.json')
+
 const async = require('async')
-const newman = require('newman')
 
-const PARALLEL_RUN_COUNT = 2
-
-const parametersForTestRun = {
-    collection: path.join(__dirname, 'postman/postman_collection_open_source.json'), // your collection
-    reporters: 'cli'
-};
-
-parallelCollectionRun = function (done) {
-    newman.run(parametersForTestRun, done);
-};
-
-let commands = []
-for (let index = 0; index < PARALLEL_RUN_COUNT; index++) {
-    commands.push(parallelCollectionRun);
+newmanRunner = function (done) 
+{
+    newman.run({
+        collection: config.baseDir + folder + collection,
+        environment: config.baseDir + folder+ environment,
+        reporters,
+        reporter: {
+            "json": {
+                "export": "./results/"+folder+collection
+            }
+        }
+    }, function (err) {
+        if (err) { throw err; }
+        console.log('Collection run complete!');
+    });
 }
 
-// Runs the Postman sample collection thrice, in parallel.
+let commands = []
+   
+config.runs.forEach(run => {
+   commands.push(newmanRunner(run.folderName, run.setup, run.environment, ["json"]);
+    commands.push(newmanRunner(run.folderName, run.cache, run.environment,[]));
+    commands.push(newmanRunner(run.folderName, run.txn, run.environment,["json", "json-summary"]));
+});
+
 async.parallel(
     commands,
     (err, results) => {
