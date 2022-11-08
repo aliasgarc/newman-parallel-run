@@ -1,0 +1,201 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7675849000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on the base page",
+            "match": {
+              "location": "com.trackingOwl.steps.BasePageSteps.user_is_on_the_base_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2052804000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User taps on language button",
+            "match": {
+              "location": "com.trackingOwl.steps.BasePageSteps.user_tap_on_language_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1807107000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User selects the English language",
+            "match": {
+              "arguments": [
+                {
+                  "val": "English",
+                  "offset": 17
+                }
+              ],
+              "location": "com.trackingOwl.steps.BasePageSteps.user_select_the(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7799973000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects the country India",
+            "match": {
+              "arguments": [
+                {
+                  "val": "India",
+                  "offset": 25
+                }
+              ],
+              "location": "com.trackingOwl.steps.BasePageSteps.user_select_the_country(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2128179000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on login page",
+            "match": {
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_is_on_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-08T17:47:58.247Z",
+        "before": [
+          {
+            "result": {
+              "duration": 35694066000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.trackingOwl.steps.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Verify user is able to see the homepage",
+        "description": "",
+        "id": "verify-homepage-scenarios;verify-user-is-able-to-see-the-homepage;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1506822000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.trackingOwl.steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2068186000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User enters mobile number 8087087642",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8087087642",
+                  "offset": 26
+                }
+              ],
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_enters_mobile_number(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1985878000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User clicks on continue button",
+            "match": {
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_click_on_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4646077000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User navigates to otp page",
+            "match": {
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_is_navigated_to_otp_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17409097000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User enters the otpcode",
+            "match": {
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_enter_the_otpcode()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37371611000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User navigates to home page",
+            "match": {
+              "location": "com.trackingOwl.steps.AcceptAssignedCourseSteps.user_navigates_to_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@verifyHomePage"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Verify HomePage Scenarios",
+    "description": "",
+    "id": "verify-homepage-scenarios",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/home.feature",
+    "tags": []
+  }
+]
